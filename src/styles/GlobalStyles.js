@@ -28,9 +28,22 @@ export default createGlobalStyle`
     --text: #000000;
     --background: #F7F7F7;
   }
+
+  h1 {
+    font-size:24px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height:24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
 `;
 
-export const Button = styled.button `
+export const Button = styled.button`
   width: 100%;
   height: 44px;
   background-color: var(--secondary);
