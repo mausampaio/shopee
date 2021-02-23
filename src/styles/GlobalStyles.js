@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -28,4 +28,14 @@ export default createGlobalStyle`
     --text: #000000;
     --background: #F7F7F7;
   }
+`;
+
+export const Button = styled.button `
+  width: 100%;
+  height: 44px;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
 `;
