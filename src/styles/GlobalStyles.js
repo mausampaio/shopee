@@ -51,4 +51,5 @@ export const Button = styled.button`
   color: var(--primary);
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
 `;
