@@ -1,12 +1,21 @@
 import { ProductCard, ProductCardDetails } from "../../components/ProductCard";
+import { ListContainer, ListContent } from "./styles";
 
 const List = () => {
   return (
-    <div>
-      <ProductCard />
-      <br />
-      <ProductCardDetails />
-    </div>
+    <ListContainer>
+      <h1>Bem-vindo!</h1>
+      <ListContent>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </ListContent>
+    </ ListContainer>
   );
 };
 
