@@ -30,9 +30,10 @@ export default createGlobalStyle`
   }
 
   h1 {
-    font-size:24px;
+    font-size:48px;
     font-weight: 500;
-    line-height: 24px;
+    margin: 32px 0 64px;
+    /* line-height: 24px; */
   }
 
   h2 {
