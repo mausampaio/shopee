@@ -1,9 +1,11 @@
-import BuyButton from "../../components/BuyButton"
+import { ProductCard, ProductCardDetails } from "../../components/ProductCard";
 
 const List = () => {
   return (
     <div>
-      <BuyButton />
+      <ProductCard />
+      <br />
+      <ProductCardDetails />
     </div>
   );
 };
