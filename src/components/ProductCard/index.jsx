@@ -10,34 +10,36 @@ import {
   TitleWithLink,
 } from "./styles";
 
-export const ProductCard = () => {
+export const ProductCard = ({ productDetails = {} }) => {
+  const { url, image, name, price } = productDetails;
+
   return (
     <CardWrapper>
-      <Link to="/">
+      <Link to={url}>
         <ImageContainer>
-          <img src="https://via.placeholder.com/226" alt="Placeholder" />
+          <img src={image} alt={name} />
         </ImageContainer>
       </Link>
-      <TitleWithLink to="/">Parafusadeira Automática Bri-tania</TitleWithLink>
-      <PriceTag>
-        259,<span>99</span>
-      </PriceTag>
+      <TitleWithLink to="/">{name}</TitleWithLink>
+      <PriceTag>{price}</PriceTag>
       <Installments>ou 10x de 24,90</Installments>
       <BuyButton />
     </CardWrapper>
   );
 };
 
-export const ProductCardDetails = () => {
+export const ProductCardDetails = ({ productDetails = {} }) => {
+  const { description, image, name, price } = productDetails;
+
   return (
     <CardWrapper row>
       <ImageContainer row>
-        <img src="https://via.placeholder.com/226" alt="Placeholder" />
+        <img src={image} alt={name} />
       </ImageContainer>
       <Description>
-        <p>Lorem Ipsum Dollor Emmet Elem Ipsum Seryun Meskver</p>
+        <p>{description}</p>
         <div>
-          <PriceTag>249,00</PriceTag>
+          <PriceTag>{price}</PriceTag>
           <Installments>ou 10x de 24,90</Installments>
         </div>
         <BuyButton />
