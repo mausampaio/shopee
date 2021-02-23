@@ -1,7 +1,9 @@
+import BuyButton from "../../components/BuyButton"
+
 const List = () => {
   return (
     <div>
-      <h1>List page</h1>
+      <BuyButton />
     </div>
   );
 };
