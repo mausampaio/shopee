@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { truncateString } from "../../utils/truncateString";
+import { localePriceFormater } from "../../utils/localePriceFormater";
 import BuyButton from "../BuyButton";
 import {
   CardWrapper,
@@ -26,8 +27,10 @@ export const ProductCard = ({ productDetails = {} }) => {
       >
         {truncateString(name, 40)}
       </TitleWithLink>
-      <PriceTag>{price}</PriceTag>
-      <Installments>ou 10x de 24,90</Installments>
+      <PriceTag>{localePriceFormater(price)}</PriceTag>
+      <Installments>{`ou 10x de ${localePriceFormater(
+        price / 10
+      )}`}</Installments>
       <BuyButton />
     </CardWrapper>
   );
@@ -43,8 +46,10 @@ export const ProductCardDetails = ({ product }) => {
       <Description>
         <p>{description}</p>
         <div>
-          <PriceTag>{price}</PriceTag>
-          <Installments>ou 10x de 24,90</Installments>
+          <PriceTag>{localePriceFormater(price)}</PriceTag>
+          <Installments>{`ou 10x de ${localePriceFormater(
+            price / 10
+          )}`}</Installments>
         </div>
         <BuyButton />
       </Description>
