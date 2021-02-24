@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ProductCard, ProductCardDetails } from "../../components/ProductCard";
+import { ProductCard } from "../../components/ProductCard";
 import { fetchProducts } from "../../services/api";
-import { ListContainer, ListContent } from "./styles";
+import { ListContent } from "./styles";
+import { Container } from "../../styles/GlobalStyles";
 
 const List = () => {
   const [products, setProducts] = useState([]);
@@ -11,14 +12,14 @@ const List = () => {
   }, []);
 
   return (
-    <ListContainer>
+    <Container>
       <h1>Bem-vindo!</h1>
       <ListContent>
         {products.length
           ? products.map((product) => <ProductCard productDetails={product} />)
           : "Não existem produtos"}
       </ListContent>
-    </ListContainer>
+    </Container>
   );
 };
 
