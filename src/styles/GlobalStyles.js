@@ -54,3 +54,9 @@ export const Button = styled.button`
   font-weight: 500;
   cursor: pointer;
 `;
+
+export const Container = styled.div`
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+`;
