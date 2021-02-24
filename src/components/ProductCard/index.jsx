@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { truncateString } from "../../utils/truncateString";
 import BuyButton from "../BuyButton";
 import {
   CardWrapper,
@@ -23,7 +24,7 @@ export const ProductCard = ({ productDetails = {} }) => {
       <TitleWithLink
         to={{ pathname: `/products/${id}`, state: productDetails }}
       >
-        {name}
+        {truncateString(name, 40)}
       </TitleWithLink>
       <PriceTag>{price}</PriceTag>
       <Installments>ou 10x de 24,90</Installments>

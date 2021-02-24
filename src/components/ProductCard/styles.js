@@ -21,10 +21,13 @@ export const ImageContainer = styled.div`
   width: 226px;
   height: 226px;
   overflow: hidden;
-  background-color: black;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    width: 100%;
+    max-height: 100%;
   }
 
   ${({ row }) =>
