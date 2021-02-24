@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const ShopeeButton = styled.button`
+export const ShopeeLink = styled(Link)`
   padding-left: 4.5%;
   cursor: pointer;
   outline: 0;

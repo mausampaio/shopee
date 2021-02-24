@@ -4,7 +4,7 @@ import Shopee from "../../assets/images/Shopee.png";
 
 import {
   Container,
-  ShopeeButton,
+  ShopeeLink,
   SearchForm,
   SearchButton,
   SearchIcon,
@@ -19,9 +19,9 @@ function Header(props) {
 
   return (
     <Container>
-      <ShopeeButton onClick={(e) => e.preventDefault()}>
+      <ShopeeLink to="/">
         <img src={Shopee} alt={"Shoppe"} />
-      </ShopeeButton>
+      </ShopeeLink>
       <SearchForm>
         <input type="text" placeholder="Buscar...." />
         <SearchButton onClick={(e) => e.preventDefault()}>
