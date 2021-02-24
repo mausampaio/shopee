@@ -17,7 +17,7 @@ const List = () => {
       <ListContent>
         {products.length
           ? products.map((product) => <ProductCard productDetails={product} />)
-          : "Não existem produtos"}
+          : ( <h2>Não existem produtos</h2> )}
       </ListContent>
     </Container>
   );

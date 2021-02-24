@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const ListContent = styled.div`
   display: grid;
@@ -7,5 +7,10 @@ export const ListContent = styled.div`
 
   > * {
     margin-bottom: 32px;
+  }
+
+  > h2 {
+    grid-column: 1 / 5;
+    text-align: center; 
   }
 `;
