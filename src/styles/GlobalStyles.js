@@ -60,3 +60,11 @@ export const Container = styled.div`
   max-width: 1100px;
   margin: 0 auto;
 `;
+
+export const PriceTag = styled.span`
+  font-size: 32px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+`;
