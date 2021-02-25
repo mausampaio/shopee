@@ -2,7 +2,7 @@ import React from "react";
 import BuyButton from "../../components/BuyButton";
 import { PriceTag } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
-import { Item } from "./styles";
+import { Item, Property } from "./styles";
 
 export function CartItem({ product, lineBreak }) {
   const { name, price, quantity } = product;
@@ -10,15 +10,15 @@ export function CartItem({ product, lineBreak }) {
   return (
     <Item lineBreak={lineBreak}>
       <h2>{name}</h2>
-      <div>
+      <Property>
         <PriceTag>{localePriceFormater(price)}</PriceTag>
-      </div>
-      <div>
+      </Property>
+      <Property>
         <BuyButton productCartNumber={quantity} />
-      </div>
-      <div>
+      </Property>
+      <Property>
         <PriceTag>{localePriceFormater(quantity * price)}</PriceTag>
-      </div>
+      </Property>
     </Item>
   );
 }
