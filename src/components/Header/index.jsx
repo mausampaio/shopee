@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import Shopee from "../../assets/images/Shopee.png";
 
@@ -17,6 +18,13 @@ function Header(props) {
   let { itemsInCart } = props;
   itemsInCart = 6;
 
+  const history = useHistory();
+
+  const handleGoToCart = () => {
+    history.push("/cart");
+    console.log(props);
+  };
+
   return (
     <Container>
       <ShopeeLink to="/">
@@ -28,14 +36,9 @@ function Header(props) {
           <SearchIcon />
         </SearchButton>
       </SearchForm>
-      <CartButton
-        onClick={(e) => {
-          e.preventDefault();
-          console.log(itemsInCart);
-        }}
-      >
+      <CartButton onClick={handleGoToCart}>
         <ShoppingCart />
-        {itemsInCart !== 0 && itemsInCart && (
+        {itemsInCart >= 1 && itemsInCart && (
           <ItemsNumber>
             <span>{itemsInCart}</span>
           </ItemsNumber>
