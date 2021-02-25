@@ -11,12 +11,6 @@ const INITIAL_CART = [
     price: 5.49,
     quantity: 1,
   },
-  {
-    name: "Duracell - AAA Batteries (4-Pack)",
-    id: 43900,
-    price: 5.49,
-    quantity: 5,
-  },
 ];
 
 function Provider({ children }) {
@@ -30,15 +24,60 @@ function Provider({ children }) {
       setLoading(false);
     });
     return () => {
+      setLoading(true);
       setProducts([]);
     };
   }, []);
 
-  return (
-    <ContextProvider value={{ cart, products, loading }}>
-      {children}
-    </ContextProvider>
-  );
+  const addProduct = (productId) => {
+    // verificar se já está no carrinho
+    const foundProd = cart.find((prod) => prod.id === productId);
+    // se sim, adiciona à quantidade
+    if (foundProd) {
+      foundProd.quantity += 1;
+      const newCart = cart.map((prod) =>
+        prod.id === foundProd.id ? foundProd : prod
+      );
+      setCart(newCart);
+    } else {
+      const { name, id, price } = products.find(
+        (prod) => prod.id === productId
+      );
+      const newProd = {
+        id,
+        name,
+        price,
+        quantity: 1,
+      };
+      // se não, adiciona o produto no array com qtd = 1
+      setCart([...cart, newProd]);
+    }
+  };
+
+  const removeProduct = (productId) => {
+    console.log("Crick!", productId);
+    const foundProd = cart.find((prod) => prod.id === productId);
+    if (foundProd.quantity === 1) {
+      const newCart = cart.filter((prod) => prod.id !== foundProd.id);
+      setCart(newCart);
+    } else {
+      foundProd.quantity -= 1;
+      const newCart = cart.map((prod) =>
+        prod.id === foundProd.id ? foundProd : prod
+      );
+      setCart(newCart);
+    }
+  };
+
+  const cartContext = {
+    cart,
+    products,
+    loading,
+    addProduct,
+    removeProduct,
+  };
+
+  return <ContextProvider value={cartContext}>{children}</ContextProvider>;
 }
 
 export { Provider, Consumer, Store };
