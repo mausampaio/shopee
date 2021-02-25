@@ -1,9 +1,14 @@
+import React from "react";
+import { Store } from "../../context";
 import { Button, Container } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
 import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
 
 const Cart = () => {
+  const state = React.useContext(Store);
+  const { cart } = state;
+
   return (
     <Container>
       <h1>Titulo da Pagina</h1>
@@ -15,8 +20,13 @@ const Cart = () => {
           <span>Subtotal</span>
         </Header>
         <Content>
-          <CartItem lineBreak />
-          <CartItem />
+          {cart?.map((product, index) => (
+            <CartItem
+              key={product.id}
+              product={product}
+              lineBreak={cart.length !== index + 1}
+            />
+          ))}
         </Content>
         <Footer>
           <div>
