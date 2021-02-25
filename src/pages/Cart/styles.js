@@ -8,9 +8,11 @@ export const Header = styled.div`
   display: flex;
   > div {
     width: 100%;
+    min-width: 300px;
   }
   > span {
     text-align: center;
+    width: 100%;
     min-width: 226px;
   }
 `;
@@ -47,11 +49,19 @@ export const Item = styled.div`
 
   > h2 {
     width: 100%;
+    min-width: 300px;
     margin: 0;
   }
-  span {
+`;
+
+export const Property = styled.div`
+  width: 100%;
+  min-width: 226px;
+  display: flex;
+  justify-content: left;
+
+  > span {
+    padding: 0 30px;
     margin: 0;
-    text-align: center;
-    min-width: 226px;
   }
 `;

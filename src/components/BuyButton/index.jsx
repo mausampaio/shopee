@@ -3,8 +3,7 @@ import { BuyButtonContainer, ProductDelete, ProductSpan, ProductUnitButtonContai
 
 
 const BuyButton = props => {
-  let { productCartNumber, onIncrement, onDecrement } = props;
-  productCartNumber = 0;
+  let { productCartNumber = 0, onIncrement, onDecrement } = props;
 
   return (
     <>
