@@ -9,6 +9,7 @@ export const Container = styled.div`
   background: var(--primary);
   height: 70px;
   width: 100%;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14);
 `;
 
 export const ShopeeLink = styled(Link)`
