@@ -4,18 +4,20 @@ import { PriceTag } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
 import { Item } from "./styles";
 
-export function CartItem({ lineBreak }) {
+export function CartItem({ product, lineBreak }) {
+  const { name, price, quantity } = product;
+
   return (
     <Item lineBreak={lineBreak}>
-      <h2>Parafusadeira Automática Bri-tania</h2>
+      <h2>{name}</h2>
       <div>
-        <PriceTag>{localePriceFormater(590.0)}</PriceTag>
+        <PriceTag>{localePriceFormater(price)}</PriceTag>
       </div>
       <div>
-        <BuyButton />
+        <BuyButton productCartNumber={quantity} />
       </div>
       <div>
-        <PriceTag>{localePriceFormater(590.0)}</PriceTag>
+        <PriceTag>{localePriceFormater(quantity * price)}</PriceTag>
       </div>
     </Item>
   );
