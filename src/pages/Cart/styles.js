@@ -6,14 +6,12 @@ export const Header = styled.div`
   padding: 0 32px;
   width: 100%;
   display: flex;
-  > div {
-    width: 100%;
-    min-width: 300px;
-  }
+  justify-content: flex-end;
+
   > span {
     text-align: center;
-    width: 100%;
     min-width: 226px;
+    margin: 0 16px;
   }
 `;
 
@@ -55,13 +53,12 @@ export const Item = styled.div`
 `;
 
 export const Property = styled.div`
-  width: 100%;
   min-width: 226px;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
+  margin: 0 16px;
 
   > span {
-    padding: 0 30px;
     margin: 0;
   }
 `;
