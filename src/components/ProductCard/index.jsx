@@ -11,9 +11,19 @@ import {
   PriceTag,
   TitleWithLink,
 } from "./styles";
+import { Store } from "../../context";
 
 export const ProductCard = ({ productDetails = {} }) => {
+  const [quantity, setQuantity] = React.useState(0);
   const { id, image, name, price } = productDetails;
+  const state = React.useContext(Store);
+
+  React.useEffect(() => {
+    const foundItem = state.cart.find((product) => product.id === id);
+    if (foundItem) {
+      setQuantity(foundItem.quantity);
+    }
+  }, [id, state, quantity]);
 
   return (
     <CardWrapper>
@@ -31,13 +41,23 @@ export const ProductCard = ({ productDetails = {} }) => {
       <Installments>{`ou 10x de ${localePriceFormater(
         price / 10
       )}`}</Installments>
-      <BuyButton />
+      <BuyButton productCartNumber={quantity} />
     </CardWrapper>
   );
 };
 
 export const ProductCardDetails = ({ product }) => {
-  const { image, name, description, price } = product;
+  const [quantity, setQuantity] = React.useState(0);
+  const { id, description, image, name, price } = product;
+  const state = React.useContext(Store);
+
+  React.useEffect(() => {
+    const foundItem = state.cart.find((pd) => pd.id === id);
+    if (foundItem) {
+      setQuantity(foundItem.quantity);
+    }
+  }, [id, state, quantity]);
+
   return (
     <CardWrapper row>
       <ImageContainer row>
@@ -51,7 +71,7 @@ export const ProductCardDetails = ({ product }) => {
             price / 10
           )}`}</Installments>
         </div>
-        <BuyButton />
+        <BuyButton productCartNumber={quantity} />
       </Description>
     </CardWrapper>
   );
