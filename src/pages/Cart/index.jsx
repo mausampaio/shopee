@@ -1,5 +1,4 @@
-import BuyButton from "../../components/BuyButton";
-import { Container } from "../../styles/GlobalStyles";
+import { Button, Container } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
 import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
@@ -23,8 +22,8 @@ const Cart = () => {
           <div>
             <TotalPrice>{localePriceFormater(590.0)}</TotalPrice>
           </div>
-          <div>
-            <BuyButton />
+          <div style={{ width: "226px" }}>
+            <Button>Finalizar Compra</Button>
           </div>
         </Footer>
       </div>
