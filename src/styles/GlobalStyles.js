@@ -58,7 +58,7 @@ export const Button = styled.button`
 
 export const Container = styled.div`
   width: 80%;
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
 `;
 
