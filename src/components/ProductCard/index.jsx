@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { truncateString } from "../../utils/truncateString";
 import { localePriceFormater } from "../../utils/localePriceFormater";
@@ -14,16 +14,18 @@ import {
 import { Store } from "../../context";
 
 export const ProductCard = ({ productDetails = {} }) => {
-  const [quantity, setQuantity] = React.useState(0);
+  const [quantity, setQuantity] = useState(0);
   const { id, image, name, price } = productDetails;
-  const state = React.useContext(Store);
+  const context = useContext(Store);
 
-  React.useEffect(() => {
-    const foundItem = state.cart.find((product) => product.id === id);
+  useEffect(() => {
+    const foundItem = context.cart.find((product) => product.id === id);
     if (foundItem) {
       setQuantity(foundItem.quantity);
+    } else {
+      setQuantity(0);
     }
-  }, [id, state, quantity]);
+  }, [id, context, quantity]);
 
   return (
     <CardWrapper>
@@ -41,7 +43,11 @@ export const ProductCard = ({ productDetails = {} }) => {
       <Installments>{`ou 10x de ${localePriceFormater(
         price / 10
       )}`}</Installments>
-      <BuyButton productCartNumber={quantity} />
+      <BuyButton
+        productCartNumber={quantity}
+        onIncrement={() => context.addProduct(id)}
+        onDecrement={() => context.removeProduct(id)}
+      />
     </CardWrapper>
   );
 };
@@ -49,14 +55,14 @@ export const ProductCard = ({ productDetails = {} }) => {
 export const ProductCardDetails = ({ product }) => {
   const [quantity, setQuantity] = React.useState(0);
   const { id, description, image, name, price } = product;
-  const state = React.useContext(Store);
+  const context = React.useContext(Store);
 
   React.useEffect(() => {
-    const foundItem = state.cart.find((pd) => pd.id === id);
+    const foundItem = context.cart.find((pd) => pd.id === id);
     if (foundItem) {
       setQuantity(foundItem.quantity);
     }
-  }, [id, state, quantity]);
+  }, [id, context, quantity]);
 
   return (
     <CardWrapper row>
@@ -71,7 +77,11 @@ export const ProductCardDetails = ({ product }) => {
             price / 10
           )}`}</Installments>
         </div>
-        <BuyButton productCartNumber={quantity} />
+        <BuyButton
+          productCartNumber={quantity}
+          onIncrement={() => context.addProduct(id)}
+          onDecrement={() => context.removeProduct(id)}
+        />
       </Description>
     </CardWrapper>
   );
