@@ -54,6 +54,12 @@ function Provider({ children }) {
     }
   };
 
+  const getCartTotal = () => {
+    const total = cart.reduce((sum, item) => (sum += item.price * item.quantity), 0);
+
+    return total;
+  };
+
   const removeProduct = (productId) => {
     console.log("Crick!", productId);
     const foundProd = cart.find((prod) => prod.id === productId);
@@ -75,6 +81,7 @@ function Provider({ children }) {
     loading,
     addProduct,
     removeProduct,
+    getCartTotal,
   };
 
   return <ContextProvider value={cartContext}>{children}</ContextProvider>;
