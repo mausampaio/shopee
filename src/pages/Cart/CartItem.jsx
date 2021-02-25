@@ -4,8 +4,8 @@ import { PriceTag } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
 import { Item, Property } from "./styles";
 
-export function CartItem({ product, lineBreak }) {
-  const { name, price, quantity } = product;
+export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
+  const { id, name, price, quantity  } = product;
 
   return (
     <Item lineBreak={lineBreak}>
@@ -14,7 +14,11 @@ export function CartItem({ product, lineBreak }) {
         <PriceTag>{localePriceFormater(price)}</PriceTag>
       </Property>
       <Property>
-        <BuyButton productCartNumber={quantity} />
+        <BuyButton 
+          productCartNumber={quantity}
+          onIncrement={() => onIncrement(id)}
+          onDecrement={() => onDecrement(id)}
+        />
       </Property>
       <Property>
         <PriceTag>{localePriceFormater(quantity * price)}</PriceTag>

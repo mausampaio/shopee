@@ -6,8 +6,8 @@ import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
 
 const Cart = () => {
-  const state = React.useContext(Store);
-  const { cart } = state;
+  const context = React.useContext(Store);
+  const { cart, addProduct, removeProduct, getCartTotal } = context;
 
   return (
     <Container>
@@ -25,12 +25,14 @@ const Cart = () => {
               key={product.id}
               product={product}
               lineBreak={cart.length !== index + 1}
+              onIncrement={addProduct}
+              onDecrement={removeProduct}
             />
           ))}
         </Content>
         <Footer>
           <div>
-            <TotalPrice>{localePriceFormater(590.0)}</TotalPrice>
+            <TotalPrice>{localePriceFormater(getCartTotal())}</TotalPrice>
           </div>
           <div style={{ width: "226px" }}>
             <Button>Finalizar Compra</Button>
