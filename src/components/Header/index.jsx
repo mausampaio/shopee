@@ -15,11 +15,9 @@ import {
   ItemsNumber,
 } from "./styles";
 
-function Header(props) {
+function Header() {
   const context = useContext(Store);
-
-  let { itemsInCart } = props;
-  itemsInCart = 6;
+  const itemsInCart = context.cart.length;
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -27,7 +25,6 @@ function Header(props) {
 
   const handleGoToCart = () => {
     history.push("/cart");
-    console.log(props);
   };
 
   const handleSearch = (e) => {
@@ -42,7 +39,7 @@ function Header(props) {
         <img src={Shopee} alt={"Shoppe"} />
       </ShopeeLink>
       <SearchForm>
-        <input 
+        <input
           type="text"
           placeholder="Buscar...."
           value={searchValue}
@@ -54,7 +51,7 @@ function Header(props) {
       </SearchForm>
       <CartButton onClick={handleGoToCart}>
         <ShoppingCart />
-        {itemsInCart >= 1 && itemsInCart && (
+        {itemsInCart >= 1 && (
           <ItemsNumber>
             <span>{itemsInCart}</span>
           </ItemsNumber>

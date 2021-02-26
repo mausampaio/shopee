@@ -4,17 +4,17 @@ import { fetchProducts, queryProducts } from "./services/api";
 const Store = createContext();
 const { Provider: ContextProvider, Consumer } = Store;
 
-const INITIAL_CART = [
-  {
-    id: 43900,
-    name: "Duracell - AAA Batteries (4-Pack)",
-    price: 5.49,
-    quantity: 1,
-  },
-];
+// const INITIAL_CART = [
+//   {
+//     id: 43900,
+//     name: "Duracell - AAA Batteries (4-Pack)",
+//     price: 5.49,
+//     quantity: 1,
+//   },
+// ];
 
 function Provider({ children }) {
-  const [cart, setCart] = useState(INITIAL_CART);
+  const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -81,7 +81,10 @@ function Provider({ children }) {
   };
 
   const getCartTotal = () => {
-    const total = cart.reduce((sum, item) => (sum += item.price * item.quantity), 0);
+    const total = cart.reduce(
+      (sum, item) => (sum += item.price * item.quantity),
+      0
+    );
 
     return total;
   };
