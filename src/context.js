@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createContext } from "react";
-import { fetchProducts } from "./services/api";
+import { fetchProducts, queryProducts } from "./services/api";
 
 const Store = createContext();
 const { Provider: ContextProvider, Consumer } = Store;
@@ -18,16 +18,27 @@ function Provider({ children }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchProducts().then((response) => {
-      setProducts(response);
-      setLoading(false);
-    });
-    return () => {
-      setLoading(true);
-      setProducts([]);
-    };
-  }, []);
+  // useEffect(() => {
+  //   getProducts();
+  //   return () => {
+  //     setLoading(true);
+  //     setProducts([]);
+  //   };
+  // }, []);
+
+  const getProducts = async () => {
+    setLoading(true);
+    const result = await fetchProducts();
+    setLoading(false);
+    setProducts(result);
+  };
+
+  const getSearchedProduct = async (searchValue) => {
+    setLoading(true);
+    const result = await queryProducts(searchValue);
+    setLoading(false);
+    setProducts(result);
+  };
 
   const addProduct = (productId) => {
     // verificar se já está no carrinho
@@ -54,12 +65,6 @@ function Provider({ children }) {
     }
   };
 
-  const getCartTotal = () => {
-    const total = cart.reduce((sum, item) => (sum += item.price * item.quantity), 0);
-
-    return total;
-  };
-
   const removeProduct = (productId) => {
     console.log("Crick!", productId);
     const foundProd = cart.find((prod) => prod.id === productId);
@@ -75,6 +80,12 @@ function Provider({ children }) {
     }
   };
 
+  const getCartTotal = () => {
+    const total = cart.reduce((sum, item) => (sum += item.price * item.quantity), 0);
+
+    return total;
+  };
+
   const cartContext = {
     cart,
     products,
@@ -82,6 +93,8 @@ function Provider({ children }) {
     addProduct,
     removeProduct,
     getCartTotal,
+    getProducts,
+    getSearchedProduct,
   };
 
   return <ContextProvider value={cartContext}>{children}</ContextProvider>;
