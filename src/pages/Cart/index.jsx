@@ -11,7 +11,10 @@ const Cart = () => {
 
   return (
     <Container>
-      <h1>Titulo da Pagina</h1>
+      <h1>Carrinho</h1>
+      {cart.length === 0 
+        ? (<h2 style={{display: "flex", justifyContent : "center"}}>Não existem produtos</h2>) 
+        : (
       <div>
         <Header>
           <div></div>
@@ -39,7 +42,8 @@ const Cart = () => {
           </div>
         </Footer>
       </div>
-    </Container>
+      )}
+  </Container>
   );
 };
 
