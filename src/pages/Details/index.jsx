@@ -4,22 +4,21 @@ import { DetailsContent } from "./styles";
 import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
+import { Loading } from "../../components/Lodaing";
 
 function Details(props) {
   const context = useContext(Store);
-  console.log(context);
   const { id } = useParams();
-  console.log("context.products: ", context.products);
-
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    console.log("No useEffect");
-    //setProduct(context.getProductById(id));
-    //setProduct(props.location.state);
-  }, []);
-
-  console.log("product: ", product);
+    console.log("Saporra funciona?", context.products);
+    if (context.products.length !== 0) {
+      const selectedProd = context.products.find((prod) => prod.id === +id);
+      setProduct(selectedProd);
+      console.log("Saporra funciona?", selectedProd);
+    }
+  }, [context.products, id]);
 
   const history = useHistory();
 
@@ -29,22 +28,28 @@ function Details(props) {
 
   return (
     <Container>
-      <h1>{product?.name}</h1>
-      <DetailsContent>
-        <ProductCardDetails product={product && product} />
-      </DetailsContent>
-      <div
-        style={{
-          paddingTop: "32px",
-          width: "100%",
-          display: "flex",
-          flexDirection: "row-reverse",
-        }}
-      >
-        <div style={{ width: "226px" }}>
-          <Button onClick={handleGoBack}>Voltar</Button>
-        </div>
-      </div>
+      {context.loading ? (
+        <Loading />
+      ) : (
+        <>
+          <h1>{product?.name || "Carregando"}</h1>
+          <DetailsContent>
+            {product && <ProductCardDetails product={product} />}
+          </DetailsContent>
+          <div
+            style={{
+              paddingTop: "32px",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row-reverse",
+            }}
+          >
+            <div style={{ width: "226px" }}>
+              <Button onClick={handleGoBack}>Voltar</Button>
+            </div>
+          </div>
+        </>
+      )}
     </Container>
   );
 }

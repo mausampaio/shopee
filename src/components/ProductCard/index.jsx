@@ -61,7 +61,7 @@ export const ProductCardDetails = ({ product }) => {
     const foundItem = context.cart.find((pd) => pd.id === id);
     if (foundItem) {
       setQuantity(foundItem.quantity);
-    }  else {
+    } else {
       setQuantity(0);
     }
   }, [id, context, quantity]);

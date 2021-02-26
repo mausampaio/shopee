@@ -17,13 +17,10 @@ function Provider({ children }) {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState({});
 
   useEffect(() => {
     getProducts();
-    return () => {
-      setLoading(true);
-      setProducts([]);
-    };
   }, []);
 
   const getProducts = async () => {
@@ -41,11 +38,10 @@ function Provider({ children }) {
   };
 
   const getProductById = (id) => {
-    console.log("entrando na função getProductsById");
-    //getProducts();
-    console.log("products: ", products);
-    const product = products.find((prod) => prod.id === id);
-    return product;
+    setLoading(true);
+    const selectedProduct = products.find((product) => product.id === id);
+    setProduct(selectedProduct);
+    setLoading(false);
   };
 
   const addProduct = (productId) => {
@@ -100,6 +96,7 @@ function Provider({ children }) {
   const cartContext = {
     cart,
     products,
+    product,
     loading,
     addProduct,
     removeProduct,

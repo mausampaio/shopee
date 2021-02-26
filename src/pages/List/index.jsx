@@ -1,9 +1,10 @@
 import { useContext, useEffect } from "react";
 import { ProductCard } from "../../components/ProductCard";
-import { ListContent, Loading } from "./styles";
+import { ListContent } from "./styles";
 import { Container } from "../../styles/GlobalStyles";
 import { Store } from "../../context";
 import { useQuery } from "../../hooks/useQuery";
+import { Loading } from "../../components/Lodaing";
 
 const List = () => {
   const context = useContext(Store);
