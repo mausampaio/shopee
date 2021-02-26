@@ -18,13 +18,13 @@ function Provider({ children }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   getProducts();
-  //   return () => {
-  //     setLoading(true);
-  //     setProducts([]);
-  //   };
-  // }, []);
+  useEffect(() => {
+    getProducts();
+    return () => {
+      setLoading(true);
+      setProducts([]);
+    };
+  }, []);
 
   const getProducts = async () => {
     setLoading(true);
@@ -38,6 +38,14 @@ function Provider({ children }) {
     const result = await queryProducts(searchValue);
     setLoading(false);
     setProducts(result);
+  };
+
+  const getProductById = (id) => {
+    console.log("entrando na função getProductsById");
+    //getProducts();
+    console.log("products: ", products);
+    const product = products.find((prod) => prod.id === id);
+    return product;
   };
 
   const addProduct = (productId) => {
@@ -98,6 +106,7 @@ function Provider({ children }) {
     getCartTotal,
     getProducts,
     getSearchedProduct,
+    getProductById,
   };
 
   return <ContextProvider value={cartContext}>{children}</ContextProvider>;

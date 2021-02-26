@@ -11,7 +11,8 @@ const List = () => {
   const searchValue = query.get("search");
 
   useEffect(() => {
-    searchValue 
+    console.log("no useEffetc do List");
+    searchValue
       ? context.getSearchedProduct(searchValue)
       : context.getProducts();
   }, [searchValue]);

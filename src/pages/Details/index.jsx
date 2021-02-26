@@ -1,11 +1,25 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { DetailsContent } from "./styles";
 import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
+import { Store } from "../../context";
 
 function Details(props) {
-  const product = props.location.state;
+  const context = useContext(Store);
+  console.log(context);
+  const { id } = useParams();
+  console.log("context.products: ", context.products);
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    console.log("No useEffect");
+    //setProduct(context.getProductById(id));
+    //setProduct(props.location.state);
+  }, []);
+
+  console.log("product: ", product);
 
   const history = useHistory();
 
@@ -15,9 +29,9 @@ function Details(props) {
 
   return (
     <Container>
-      <h1>{product.name}</h1>
+      <h1>{product?.name}</h1>
       <DetailsContent>
-        <ProductCardDetails product={product} />
+        <ProductCardDetails product={product && product} />
       </DetailsContent>
       <div
         style={{
