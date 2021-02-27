@@ -55,7 +55,7 @@ O Shopee é uma aplicação desenvolvida para a conclusão do módulo de 'front-
 
 <br/>
 
-## :rocket: Tecnologias Utilizada
+## :rocket: Tecnologias Utilizadas
 
 - [ReactJS](https://github.com/facebook/react)
 
@@ -101,14 +101,29 @@ O Shopee é uma aplicação desenvolvida para a conclusão do módulo de 'front-
 
 ## :punch: Contribuição
 
-<a href="url"><img src="https://github.com/alandersonsds.png" height="auto" width="200" style="border-radius:50%"></a>
-Alanderson Santana - [Github](https://github.com/alandersonsds) | [Linkedin](https://linkedin.com/in/alandersonsds)
-<a href="url"><img src="https://github.com/cristianogliari.png" height="auto" width="200" style="border-radius:50%"></a>
-Cristian Ogliari - [Github](https://github.com/cristianogliari) | [Linkedin](https://linkedin.com/in/cristian-ogliari-7070bb111)
-<a href="url"><img src="https://github.com/mikansc.png" height="auto" width="200" style="border-radius:50%"></a>
-Michael Nascimento - [Github](https://github.com/mikansc) | [Linkedin](https://linkedin.com/in/michaelnsc)
-<a href="url"><img src="https://github.com/thiagomathiassimon.png" height="auto" width="200" style="border-radius:50%"></a>
-Thiago Mathias Simon - [Github](https://github.com/thiagomathiassimon) | [Linkedin](https://linkedin.com/in/thiago-mathias-simon-4b9b381bb)
+<p> 
+  <a href="url"><img src="https://github.com/alandersonsds.png" height="auto" width="50" style="border-radius:50%"></a>
+  <br/>
+  Alanderson Santana - [Github](https://github.com/alandersonsds) | [Linkedin](https://linkedin.com/in/alandersonsds)
+</p>
+
+<p>
+  <a href="url"><img src="https://github.com/cristianogliari.png" height="auto" width="50" style="border-radius:50%"></a>
+  <br/>
+  Cristian Ogliari - [Github](https://github.com/cristianogliari) | [Linkedin](https://linkedin.com/in/cristian-ogliari-7070bb111)
+</p>
+
+<p>
+  <a href="url"><img src="https://github.com/mikansc.png" height="auto" width="50" style="border-radius:50%"></a>
+  <br/>
+  Michael Nascimento - [Github](https://github.com/mikansc) | [Linkedin](https://linkedin.com/in/michaelnsc)
+</p>
+
+<p>
+  <a href="url"><img src="https://github.com/thiagomathiassimon.png" height="auto" width="50" style="border-radius:50%"></a>
+  <br/>
+  Thiago Mathias Simon - [Github](https://github.com/thiagomathiassimon) | [Linkedin](https://linkedin.com/in/thiago-mathias-simon-4b9b381bb)
+</p>
 
 ---
 
