@@ -15,6 +15,12 @@ export const CardWrapper = styled.div`
       width: 100%;
       padding: 32px;
     `};
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -39,6 +45,10 @@ export const ImageContainer = styled.div`
       : css`
           margin-bottom: 16px;
         `}
+
+  @media screen and (max-width: 375px) {
+    margin: 0;
+  }
 `;
 
 export const TitleWithLink = styled(Link)`
@@ -77,5 +87,12 @@ export const Description = styled.div`
 
   p {
     margin-top: 8px;
+  }
+
+  @media screen and (max-width: 375px) {
+    align-items: center;
+    p {
+      margin: 16px 0;
+    }
   }
 `;

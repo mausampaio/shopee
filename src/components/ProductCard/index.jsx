@@ -73,7 +73,7 @@ export const ProductCardDetails = ({ product }) => {
       </ImageContainer>
       <Description>
         <p>{description}</p>
-        <div>
+        <div style={{ width: "100%" }}>
           <PriceTag>{localePriceFormater(price)}</PriceTag>
           <Installments>{`ou 10x de ${localePriceFormater(
             price / 10
