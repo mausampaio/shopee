@@ -22,6 +22,7 @@ function Header() {
   const history = useHistory();
 
   const handleGoToCart = () => {
+    context.setSearchValue("");
     history.push("/cart");
   };
 
