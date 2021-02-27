@@ -82,7 +82,6 @@ export const Item = styled.div`
   align-items: center;
   > h2 {
     width: 100%;
-    /* min-width: 300px; */
     margin: 0;
   }
   @media screen and (max-width: 768px) {

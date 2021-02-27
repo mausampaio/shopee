@@ -12,11 +12,9 @@ function Details(props) {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    console.log("Saporra funciona?", context.products);
     if (context.products.length !== 0) {
       const selectedProd = context.products.find((prod) => prod.id === +id);
       setProduct(selectedProd);
-      console.log("Saporra funciona?", selectedProd);
     }
   }, [context.products, id]);
 
