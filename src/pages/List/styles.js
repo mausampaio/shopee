@@ -13,4 +13,19 @@ export const ListContent = styled.div`
     grid-column: 1 / 5;
     text-align: center;
   }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    > h2 {
+      grid-column: 1 / 3;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
