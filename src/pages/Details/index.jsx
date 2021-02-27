@@ -4,7 +4,7 @@ import { ButtonWrapper, ButtonContainer } from "./styles";
 import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
-import { Loading } from "../../components/Lodaing";
+import { Loading } from "../../components/Loading";
 
 function Details(props) {
   const context = useContext(Store);

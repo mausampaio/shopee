@@ -5,7 +5,7 @@ import { Container } from "../../styles/GlobalStyles";
 import { Store } from "../../context";
 import { useQuery } from "../../hooks/useQuery";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { Loading } from "../../components/Lodaing";
+import { Loading } from "../../components/Loading";
 import SearchForm from "../../components/SearchForm";
 
 const List = () => {
