@@ -24,6 +24,7 @@ export const StyledForm = styled.form`
   }
 
   @media screen and (max-width: 375px) {
+    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2em;
   }
