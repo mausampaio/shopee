@@ -104,33 +104,48 @@ O Shopee é uma aplicação desenvolvida para a conclusão do módulo de 'front-
 <p> 
   <a href="url"><img src="https://github.com/alandersonsds.png" height="auto" width="50" style="border-radius:50%"></a>
   <br/>
-  Alanderson Santana 
-  [Github](https://github.com/alandersonsds) 
-  [Linkedin](https://linkedin.com/in/alandersonsds)
+  Alanderson Santana -
+  <a href="https://github.com/alandersonsds">
+    Github
+  </a> |
+  <a href="https://linkedin.com/in/alandersonsds">
+    Linkedin
+  </a>
 </p>
 
 <p>
   <a href="url"><img src="https://github.com/cristianogliari.png" height="auto" width="50" style="border-radius:50%"></a>
   <br/>
-  Cristian Ogliari 
-  [Github](https://github.com/cristianogliari) 
-  [Linkedin](https://linkedin.com/in/cristian-ogliari-7070bb111)
+  Cristian Ogliari -
+  <a href="https://github.com/cristianogliari">
+    Github
+  </a> |
+  <a href="https://linkedin.com/in/cristian-ogliari-7070bb111">
+    Linkedin
+  </a>
 </p>
 
 <p>
   <a href="url"><img src="https://github.com/mikansc.png" height="auto" width="50" style="border-radius:50%"></a>
   <br/>
-  Michael Nascimento 
-  [Github](https://github.com/mikansc)
-  [Linkedin](https://linkedin.com/in/michaelnsc)
+  Michael Nascimento - 
+  <a href="https://github.com/mikansc"> 
+    Github
+  </a> |
+  <a href="https://linkedin.com/in/michelnsc"> 
+    Linkedin
+  </a>
 </p>
-
 <p>
   <a href="url"><img src="https://github.com/thiagomathiassimon.png" height="auto" width="50" style="border-radius:50%"></a>
   <br/>
-  Thiago Mathias Simon
-  [Github](https://github.com/thiagomathiassimon)
-  [Linkedin](https://linkedin.com/in/thiago-mathias-simon-4b9b381bb)
+  Thiago Mathias Simon - 
+  <a href="https://github.com/thiagomathiassimon"> 
+    Github
+  </a> |
+  <a href="https://linkedin.com/in/thiago-mathias-simon-4b9b381bb"> 
+    Linkedin
+  </a>
 </p>
 
 ---
