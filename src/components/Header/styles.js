@@ -4,68 +4,50 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
+  padding: 0 5%;
+  justify-content: space-between;
   background: var(--primary);
   height: 70px;
   width: 100%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14);
+
+  @media screen and (max-width: 375px) {
+    position: sticky;
+    top: 0;
+  }
 `;
 
 export const ShopeeLink = styled(Link)`
-  padding-left: 4.5%;
   cursor: pointer;
   outline: 0;
 `;
 
-export const SearchForm = styled.form`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 44px;
-  width: 29.5%;
-  background: var(--search);
-  left: 35.28%;
-  right: 35.28%;
-  top: 1.37%;
-  bottom: 94.34%;
-  border-radius: 54px;
-  margin-left: 17.5%;
+// export const SearchForm = styled.form`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   height: 44px;
+//   width: 35%;
+//   min-width: 300px;
+//   background: var(--search);
+//   border-radius: 54px;
 
-  input {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #3a3a3a;
-    padding-left: 7.55%;
-    height: 100%;
-    width: 100%;
-    outline: 0;
-  }
-  input:-ms-input-placeholder {
-    font-family: "Roboto", sans-serif;
-    color: #9e9e9e;
-    font-size: 18px;
-    font-weight: 400;
-    align-self: center;
-  }
+//   input {
+//     font-family: "Roboto", sans-serif;
+//     font-size: 18px;
+//     font-weight: 400;
+//     color: #3a3a3a;
+//     padding-left: 7.55%;
+//     height: 100%;
+//     width: 100%;
+//     outline: 0;
+//   }
 
-  input::-webkit-input-placeholder {
-    font-family: "Roboto", sans-serif;
-    color: #9e9e9e;
-    font-size: 18px;
-    font-weight: 400;
-    align-self: center;
-  }
-
-  input:-moz-placeholder {
-    font-family: "Roboto", sans-serif;
-    color: #9e9e9e;
-    font-size: 18px;
-    font-weight: 400;
-    align-self: center;
-  }
-`;
+//   @media screen and (max-width: 375px) {
+//     display: none;
+//   }
+// `;
 
 export const iconCss = css`
   width: 27px;
@@ -74,19 +56,19 @@ export const iconCss = css`
   flex-shrink: 0;
 `;
 
-export const SearchButton = styled.button`
-  align-items: center;
-  text-align: center;
-  height: 52px;
-  width: 52px;
-  cursor: pointer;
-  outline: 0;
-  padding-right: 7.55%;
-`;
+// export const SearchButton = styled.button`
+//   align-items: center;
+//   text-align: center;
+//   height: 52px;
+//   width: 52px;
+//   cursor: pointer;
+//   outline: 0;
+//   padding-right: 7.55%;
+// `;
 
-export const SearchIcon = styled(MdSearch)`
-  ${iconCss}
-`;
+// export const SearchIcon = styled(MdSearch)`
+//   ${iconCss}
+// `;
 
 export const CartButton = styled.button`
   height: 52px;
@@ -96,7 +78,6 @@ export const CartButton = styled.button`
   align-items: center;
   cursor: pointer;
   outline: 0;
-  margin-left: 27.2%;
   display: flex;
   flex-direction: row;
   position: relative;
