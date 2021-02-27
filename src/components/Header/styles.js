@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { MdSearch, MdShoppingCart } from "react-icons/md";
+import { MdShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
@@ -22,53 +22,12 @@ export const ShopeeLink = styled(Link)`
   cursor: pointer;
   outline: 0;
 `;
-
-// export const SearchForm = styled.form`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   height: 44px;
-//   width: 35%;
-//   min-width: 300px;
-//   background: var(--search);
-//   border-radius: 54px;
-
-//   input {
-//     font-family: "Roboto", sans-serif;
-//     font-size: 18px;
-//     font-weight: 400;
-//     color: #3a3a3a;
-//     padding-left: 7.55%;
-//     height: 100%;
-//     width: 100%;
-//     outline: 0;
-//   }
-
-//   @media screen and (max-width: 375px) {
-//     display: none;
-//   }
-// `;
-
 export const iconCss = css`
   width: 27px;
   height: 27px;
   fill: var(--secondary);
   flex-shrink: 0;
 `;
-
-// export const SearchButton = styled.button`
-//   align-items: center;
-//   text-align: center;
-//   height: 52px;
-//   width: 52px;
-//   cursor: pointer;
-//   outline: 0;
-//   padding-right: 7.55%;
-// `;
-
-// export const SearchIcon = styled(MdSearch)`
-//   ${iconCss}
-// `;
 
 export const CartButton = styled.button`
   height: 52px;

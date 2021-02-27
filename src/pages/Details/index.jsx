@@ -4,7 +4,7 @@ import { ButtonWrapper, ButtonContainer } from "./styles";
 import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
-import { Loading } from "../../components/Lodaing";
+import { Loading } from "../../components/Loading";
 
 function Details(props) {
   const context = useContext(Store);
@@ -12,11 +12,9 @@ function Details(props) {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    console.log("Saporra funciona?", context.products);
     if (context.products.length !== 0) {
       const selectedProd = context.products.find((prod) => prod.id === +id);
       setProduct(selectedProd);
-      console.log("Saporra funciona?", selectedProd);
     }
   }, [context.products, id]);
 

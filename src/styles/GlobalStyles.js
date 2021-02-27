@@ -33,7 +33,6 @@ export default createGlobalStyle`
     font-size:48px;
     font-weight: 500;
     margin: 32px 0 64px;
-    /* line-height: 24px; */
   }
 
   @media screen and (max-width: 375px) {
