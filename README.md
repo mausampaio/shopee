@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img src=".github/logo.png" alt="logotype shopee">
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#page_facing_up-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-web">Web</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iphone-mobile">Mobile</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias-utilizadas">Tecnologias Utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#gear-como-configurar-e-executar">Como configurar e executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#punch-contribuição">Contribuição</a>
+</p>
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mausampaio/shopee?style=flat-square">
+  
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mausampaio/shopee?style=flat-square">
+  
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mausampaio/shopee?style=flat-square">
+  
+  <a href="https://github.com/mausampaio/shopee/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mausampaio/shopee?style=flat-square">
+  </a>  
+</p>
 
-### `yarn start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 align="center">
+  <img alt="shopee" title="github_explorer" src=".github/capa.png" />
+</h3>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br/>
 
-### `yarn test`
+## :page_facing_up: Sobre
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O Shopee é uma aplicação desenvolvida para a conclusão do módulo de 'front-end' do curso DEVinHouse. Tal projeto analoga com um 'site' de compras, sendo, portanto, uma aplicação de grande verossimilhança. Foi utilizado, em seu desenvolvimento, a biblioteca 'React', 'React Router DOM' e 'Styled Components' (as quais possuem ampla utilização) e a linguagem de programação 'JavaScript'.
 
-### `yarn build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :computer: Web
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3 align="center">
+  <img alt="shopee" title="github_explorer" src=".github/web.png" />
+</h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br/>
 
-### `yarn eject`
+## :iphone: Mobile
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<h3 align="center">
+  <img alt="shopee" title="github_explorer" src=".github/mobile.png" />
+</h3>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :rocket: Tecnologias Utilizada
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [ReactJS](https://github.com/facebook/react)
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :gear: Como configurar e executar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pré-requisitos
 
-### Code Splitting
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    # Clonar o repositório
+    $ git clone https://github.com/mausampaio/shopee.git
 
-### Analyzing the Bundle Size
+    # Navegar para o diretório
+    $ cd shopee
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+### Utilizando o Docker
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
 
-### Advanced Configuration
+    $ docker-compose up -d
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+### Sem o Docker
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
 
-### `yarn build` fails to minify
+    $ npm install
+    # ou
+    $ yarn
+    # Para iniciar a aplicação
+    $ npm start
+    # ou
+    $ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+
+<br/>
+
+## :punch: Contribuição
+
+<a href="url"><img src="https://github.com/alandersonsds.png" height="auto" width="200" style="border-radius:50%"></a>
+Alanderson Santana - [Github](https://github.com/alandersonsds) | [Linkedin](https://linkedin.com/in/alandersonsds)
+<a href="url"><img src="https://github.com/cristianogliari.png" height="auto" width="200" style="border-radius:50%"></a>
+Cristian Ogliari - [Github](https://github.com/cristianogliari) | [Linkedin](https://linkedin.com/in/cristian-ogliari-7070bb111)
+<a href="url"><img src="https://github.com/mikansc.png" height="auto" width="200" style="border-radius:50%"></a>
+Michael Nascimento - [Github](https://github.com/mikansc) | [Linkedin](https://linkedin.com/in/michaelnsc)
+<a href="url"><img src="https://github.com/thiagomathiassimon.png" height="auto" width="200" style="border-radius:50%"></a>
+Thiago Mathias Simon - [Github](https://github.com/thiagomathiassimon) | [Linkedin](https://linkedin.com/in/thiago-mathias-simon-4b9b381bb)
+
+---
+
+<h4 align="center">
+  Feito com :purple_heart: by <a href="https://www.linkedin.com/in/mausampaio/" target="_blank">Maurício Sampaio</a>.
+</h4>
