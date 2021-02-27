@@ -36,7 +36,7 @@ const List = () => {
             <ProductCard productDetails={product} />
           ))
         ) : (
-          <h2>Não existem produtos</h2>
+          <h2>Nenhum resultado encontrado para esta busca</h2>
         )}
       </ListContent>
     </Container>
