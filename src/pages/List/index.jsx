@@ -33,7 +33,7 @@ const List = () => {
       <ListContent>
         {context.products.length ? (
           context.products.map((product) => (
-            <ProductCard productDetails={product} />
+            <ProductCard productDetails={product} key={product.id} />
           ))
         ) : (
           <h2>Nenhum resultado encontrado para esta busca</h2>
