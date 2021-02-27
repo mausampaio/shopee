@@ -9,7 +9,7 @@ import { Loading } from "../../components/Lodaing";
 const List = () => {
   const context = useContext(Store);
   const query = useQuery();
-  const searchValue = query.get("search");
+  const searchValue = query.get("search")?.trim();
 
   useEffect(() => {
     console.log("no useEffetc do List");
@@ -22,7 +22,10 @@ const List = () => {
     <Loading />
   ) : (
     <Container>
-      <h1>Bem-vindo!</h1>
+      {searchValue
+        ? (<h1>Resultado para "{searchValue}"</h1>)
+        : (<h1>Bem-vindo!</h1>)
+      }
       <ListContent>
         {context.products.length ? (
           context.products.map((product) => (
