@@ -100,6 +100,7 @@ function Provider({ children }) {
     product,
     loading,
     searchValue,
+    setCart,
     setSearchValue,
     addProduct,
     removeProduct,

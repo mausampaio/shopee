@@ -7,7 +7,12 @@ import { Content, Header, Footer, TotalPrice } from "./styles";
 
 const Cart = () => {
   const context = React.useContext(Store);
-  const { cart, addProduct, removeProduct, getCartTotal } = context;
+  const { cart, setCart, addProduct, removeProduct, getCartTotal } = context;
+
+  const checkout = () => {
+    setCart([]);
+    alert("A compra foi processada com sucesso, Obrigado!");
+  };
 
   return (
     <Container>
@@ -40,7 +45,7 @@ const Cart = () => {
               <TotalPrice>{localePriceFormater(getCartTotal())}</TotalPrice>
             </div>
             <div style={{ width: "226px" }}>
-              <Button>Finalizar Compra</Button>
+              <Button onClick={checkout}>Finalizar Compra</Button>
             </div>
           </Footer>
         </div>
