@@ -30,7 +30,11 @@ function Header() {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    history.push(`/products?search=${searchValue}`);
+    if (searchValue.trim()) {
+      history.push(`/products?search=${searchValue}`);
+    } else {
+      setSearchValue("");
+    }
   };
 
   return (
