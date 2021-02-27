@@ -25,7 +25,7 @@ const List = () => {
   ) : (
     <Container>
       {searchValue ? (
-        <h1>Resultado para "{searchValue}"</h1>
+        <h1>Resultados para "{searchValue}"</h1>
       ) : (
         <h1>Bem-vindo!</h1>
       )}
@@ -36,7 +36,7 @@ const List = () => {
             <ProductCard productDetails={product} />
           ))
         ) : (
-          <h2>Não existem produtos</h2>
+          <h2>Nenhum resultado encontrado para esta busca</h2>
         )}
       </ListContent>
     </Container>
