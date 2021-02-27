@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { DetailsContent } from "./styles";
+import { ButtonWrapper, ButtonContainer } from "./styles";
 import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
@@ -33,21 +33,12 @@ function Details(props) {
       ) : (
         <>
           <h1>{product?.name || "Carregando"}</h1>
-          <DetailsContent>
-            {product && <ProductCardDetails product={product} />}
-          </DetailsContent>
-          <div
-            style={{
-              paddingTop: "32px",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row-reverse",
-            }}
-          >
-            <div style={{ width: "226px" }}>
+          <div>{product && <ProductCardDetails product={product} />}</div>
+          <ButtonWrapper>
+            <ButtonContainer>
               <Button onClick={handleGoBack}>Voltar</Button>
-            </div>
-          </div>
+            </ButtonContainer>
+          </ButtonWrapper>
         </>
       )}
     </Container>

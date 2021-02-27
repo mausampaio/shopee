@@ -4,15 +4,17 @@ import { ListContent } from "./styles";
 import { Container } from "../../styles/GlobalStyles";
 import { Store } from "../../context";
 import { useQuery } from "../../hooks/useQuery";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { Loading } from "../../components/Lodaing";
+import SearchForm from "../../components/SearchForm";
 
 const List = () => {
   const context = useContext(Store);
   const query = useQuery();
+  const { width } = useWindowDimensions();
   const searchValue = query.get("search")?.trim();
 
   useEffect(() => {
-    console.log("no useEffetc do List");
     searchValue
       ? context.getSearchedProduct(searchValue)
       : context.getProducts();
@@ -22,10 +24,12 @@ const List = () => {
     <Loading />
   ) : (
     <Container>
-      {searchValue
-        ? (<h1>Resultado para "{searchValue}"</h1>)
-        : (<h1>Bem-vindo!</h1>)
-      }
+      {searchValue ? (
+        <h1>Resultado para "{searchValue}"</h1>
+      ) : (
+        <h1>Bem-vindo!</h1>
+      )}
+      {width <= 375 ? <SearchForm /> : null}
       <ListContent>
         {context.products.length ? (
           context.products.map((product) => (

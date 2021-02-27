@@ -18,6 +18,7 @@ function Provider({ children }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState({});
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     getProducts();
@@ -98,6 +99,8 @@ function Provider({ children }) {
     products,
     product,
     loading,
+    searchValue,
+    setSearchValue,
     addProduct,
     removeProduct,
     getCartTotal,

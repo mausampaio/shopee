@@ -36,6 +36,15 @@ export default createGlobalStyle`
     /* line-height: 24px; */
   }
 
+  @media screen and (max-width: 375px) {
+    h1 {
+    font-size:36px;
+    font-weight: 500;
+    margin: 32px 0 32px;
+    text-align: center;
+  }
+  }
+
   h2 {
     font-size: 18px;
     line-height:24px;
