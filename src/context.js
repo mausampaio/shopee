@@ -13,7 +13,12 @@ function Provider({ children }) {
 
   useEffect(() => {
     getProducts();
+    getCartFromLocalStorage();
   }, []);
+
+  useEffect(() => {
+    setCartToLocalStorage();
+  }, [cart]);
 
   const getProducts = async () => {
     setLoading(true);
@@ -70,6 +75,24 @@ function Provider({ children }) {
       );
       setCart(newCart);
     }
+    localStorage.setItem("shopee-cart", JSON.stringify(cart));
+  };
+
+  const getCartFromLocalStorage = () => {
+    const localCart = localStorage.getItem("shopee-cart");
+    if (localCart) {
+      setCart(JSON.parse(localCart));
+    }
+  };
+
+  const setCartToLocalStorage = () => {
+    if (cart.length > 0) {
+      localStorage.setItem("shopee-cart", JSON.stringify(cart));
+    }
+  };
+
+  const removeCartFromLocalStorage = () => {
+    localStorage.removeItem("shopee-cart");
   };
 
   const getCartTotal = () => {
@@ -91,6 +114,9 @@ function Provider({ children }) {
     setSearchValue,
     addProduct,
     removeProduct,
+    getCartFromLocalStorage,
+    setCartToLocalStorage,
+    removeCartFromLocalStorage,
     getCartTotal,
     getProducts,
     getSearchedProduct,

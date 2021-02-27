@@ -7,10 +7,18 @@ import { Content, Header, Footer, TotalPrice } from "./styles";
 
 const Cart = () => {
   const context = React.useContext(Store);
-  const { cart, setCart, addProduct, removeProduct, getCartTotal } = context;
+  const {
+    cart,
+    setCart,
+    addProduct,
+    removeProduct,
+    getCartTotal,
+    removeCartFromLocalStorage,
+  } = context;
 
   const checkout = () => {
     setCart([]);
+    removeCartFromLocalStorage();
     alert("A compra foi processada com sucesso, Obrigado!");
   };
 
