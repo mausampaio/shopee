@@ -25,7 +25,7 @@ const List = () => {
   ) : (
     <Container>
       {searchValue ? (
-        <h1>Resultado para "{searchValue}"</h1>
+        <h1>Resultados para "{searchValue}"</h1>
       ) : (
         <h1>Bem-vindo!</h1>
       )}
