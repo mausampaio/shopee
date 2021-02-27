@@ -1,13 +1,10 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import List from "./pages/List";
+import Details from "./pages/Details";
+import Cart from "./pages/Cart";
 
-import List from './pages/List';
-
-const Routes = () => {
-  return (
-    <BrowserRouter>
-      <Route path="/" exact component={List} />
-    </BrowserRouter>
-  );
-};
-
-export default Routes;
+export const routes = [
+  { path: "/", component: List, exact: true },
+  { path: "/products", component: List, exact: true },
+  { path: "/products/:id", component: Details, exact: false },
+  { path: "/cart", component: Cart, exact: false },
+];
