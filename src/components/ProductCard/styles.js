@@ -6,7 +6,7 @@ export const CardWrapper = styled.div`
   width: 258px;
   padding: 16px;
   border-radius: 7px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   ${({ row }) =>
     row &&
@@ -14,7 +14,7 @@ export const CardWrapper = styled.div`
       display: flex;
       width: 100%;
       padding: 32px;
-    `}
+    `};
 `;
 
 export const ImageContainer = styled.div`
