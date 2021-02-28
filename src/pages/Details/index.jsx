@@ -30,7 +30,7 @@ function Details(props) {
         <Loading />
       ) : (
         <>
-          <h1>{product?.name || "Carregando"}</h1>
+          <h1>{product?.name || "Produto não encontrado!"}</h1>
           <div>{product && <ProductCardDetails product={product} />}</div>
           <ButtonWrapper>
             <ButtonContainer>
