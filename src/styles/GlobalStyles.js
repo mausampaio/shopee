@@ -10,7 +10,7 @@ export default createGlobalStyle`
     min-height: 100%;
     background-color: var(--background);
   }
-  *, button, input {
+  h1, h2, span, p, a, button, input {
     border: 0;
     background: none;
     font-family: "Roboto", sans-serif;

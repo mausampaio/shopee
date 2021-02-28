@@ -110,6 +110,7 @@ function Provider({ children }) {
     product,
     loading,
     searchValue,
+    setLoading,
     setCart,
     setSearchValue,
     addProduct,
