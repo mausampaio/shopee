@@ -1,7 +1,7 @@
 import React from "react";
 import { Store } from "../../context";
 import { Button, Container } from "../../styles/GlobalStyles";
-import { localePriceFormater } from "../../utils/localePriceFormater";
+import { priceFormatter } from "../../utils/priceFormatter";
 import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
 
@@ -24,7 +24,7 @@ const Cart = () => {
 
   return (
     <Container>
-      <h1>Carrinho</h1>
+      <h1 style={{ margin: "32px 0 36px" }}>Carrinho</h1>
       {cart.length === 0 ? (
         <h2 style={{ display: "flex", justifyContent: "center" }}>
           Não existem produtos
@@ -33,7 +33,7 @@ const Cart = () => {
         <div>
           <Header>
             <div></div>
-            <span>Preco Un</span>
+            <span>Preço UN.</span>
             <span>Quantidade</span>
             <span>Subtotal</span>
           </Header>
@@ -50,7 +50,9 @@ const Cart = () => {
           </Content>
           <Footer>
             <div>
-              <TotalPrice>{localePriceFormater(getCartTotal())}</TotalPrice>
+              <TotalPrice>
+                {priceFormatter({ price: getCartTotal(), formatCents: false })}
+              </TotalPrice>
             </div>
             <div style={{ width: "226px" }}>
               <Button onClick={checkout}>Finalizar Compra</Button>

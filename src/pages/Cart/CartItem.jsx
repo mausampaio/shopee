@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BuyButton from "../../components/BuyButton";
 import { PriceTag } from "../../styles/GlobalStyles";
-import { localePriceFormater } from "../../utils/localePriceFormater";
 import { Controls, Item, Property } from "./styles";
+import { priceFormatter } from "../../utils/priceFormatter";
 
 export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
   const { id, name, price, quantity } = product;
@@ -17,7 +17,9 @@ export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
       </h2>
       <Controls>
         <Property>
-          <PriceTag>{localePriceFormater(price)}</PriceTag>
+          <PriceTag>
+            {priceFormatter({ price: price, formatCents: true })}
+          </PriceTag>
         </Property>
         <Property>
           <BuyButton
@@ -27,7 +29,9 @@ export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
           />
         </Property>
         <Property>
-          <PriceTag>{localePriceFormater(quantity * price)}</PriceTag>
+          <PriceTag>
+            {priceFormatter({ price: quantity * price, formatCents: true })}
+          </PriceTag>
         </Property>
       </Controls>
     </Item>

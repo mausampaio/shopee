@@ -60,7 +60,9 @@ export const TitleWithLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const PriceTag = styled.span`
+export const PriceTag = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 32px;
   line-height: 24px;
   font-weight: 500;
