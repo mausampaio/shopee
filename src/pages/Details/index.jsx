@@ -5,10 +5,13 @@ import { Container, Button } from "../../styles/GlobalStyles";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
 import { Loading } from "../../components/Loading";
+import SearchForm from "../../components/SearchForm";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function Details(props) {
   const context = useContext(Store);
   const { id } = useParams();
+  const { width } = useWindowDimensions();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -31,6 +34,7 @@ function Details(props) {
       ) : (
         <>
           <h1>{product?.name || "Produto não encontrado!"}</h1>
+          {width <= 575 ? <SearchForm /> : null}
           <div>{product && <ProductCardDetails product={product} />}</div>
           <ButtonWrapper>
             <ButtonContainer>
