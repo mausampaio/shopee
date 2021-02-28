@@ -12,6 +12,7 @@ import {
   TitleWithLink,
 } from "./styles";
 import { Store } from "../../context";
+import { priceFormatter } from "../../utils/priceFormatter";
 
 export const ProductCard = ({ productDetails = {} }) => {
   const [quantity, setQuantity] = useState(0);
@@ -39,7 +40,7 @@ export const ProductCard = ({ productDetails = {} }) => {
       >
         {truncateString(name, 40)}
       </TitleWithLink>
-      <PriceTag>{localePriceFormater(price)}</PriceTag>
+      <PriceTag>{priceFormatter(price)}</PriceTag>
       <Installments>{`ou 10x de ${localePriceFormater(
         price / 10
       )}`}</Installments>
@@ -74,7 +75,7 @@ export const ProductCardDetails = ({ product }) => {
       <Description>
         <p>{description}</p>
         <div style={{ width: "100%" }}>
-          <PriceTag>{localePriceFormater(price)}</PriceTag>
+          <PriceTag>{priceFormatter(price)}</PriceTag>
           <Installments>{`ou 10x de ${localePriceFormater(
             price / 10
           )}`}</Installments>
