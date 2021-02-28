@@ -8,7 +8,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 32px;
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     flex-direction: row;
     justify-content: center;
   }

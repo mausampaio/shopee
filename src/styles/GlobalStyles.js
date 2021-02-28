@@ -35,7 +35,7 @@ export default createGlobalStyle`
     margin: 32px 0 64px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     h1 {
     font-size:36px;
     font-weight: 500;

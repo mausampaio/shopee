@@ -29,7 +29,7 @@ const List = () => {
       ) : (
         <h1>Bem-vindo!</h1>
       )}
-      {width <= 375 ? <SearchForm /> : null}
+      {width <= 575 ? <SearchForm /> : null}
       <ListContent>
         {context.products.length ? (
           context.products.map((product) => (

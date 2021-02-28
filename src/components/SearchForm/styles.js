@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   align-items: center;
   height: 44px;
   width: 40%;
-  min-width: 300px;
+  min-width: 220px;
   max-width: 425px;
   background: var(--search);
   border-radius: 54px;
@@ -23,8 +23,9 @@ export const StyledForm = styled.form`
     outline: 0;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     width: 100%;
+    max-width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2em;
   }

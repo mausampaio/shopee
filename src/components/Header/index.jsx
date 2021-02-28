@@ -31,7 +31,7 @@ function Header() {
       <ShopeeLink to="/" onClick={() => context.setSearchValue("")}>
         <img src={Shopee} alt={"Shoppe"} />
       </ShopeeLink>
-      {width > 375 && <SearchForm />}
+      {width > 575 && <SearchForm />}
       <CartButton onClick={handleGoToCart}>
         <ShoppingCart />
         {itemsInCart >= 1 && (
