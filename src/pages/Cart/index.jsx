@@ -1,20 +1,26 @@
 import React from "react";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { Loading } from "../../components/Loading";
 import { Store } from "../../context";
 import { Button, Container } from "../../styles/GlobalStyles";
 import { priceFormatter } from "../../utils/priceFormatter";
 import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import SearchForm from "../../components/SearchForm";
 
 const Cart = () => {
-  const showAlert = () => new Promise(resolve => {
-    const sucess = () => {
-      toast.success("A compra foi processada com sucesso, Obrigado!", { position: "bottom-center", });
-      resolve();
-    };
-    setTimeout(sucess, 2500);
-  });
+  const showAlert = () =>
+    new Promise((resolve) => {
+      const sucess = () => {
+        toast.success("A compra foi processada com sucesso, Obrigado!", {
+          position: "bottom-center",
+        });
+        resolve();
+      };
+      setTimeout(sucess, 2500);
+    });
+
   const context = React.useContext(Store);
   const {
     cart,
@@ -27,6 +33,8 @@ const Cart = () => {
     removeCartFromLocalStorage,
   } = context;
 
+  const { width } = useWindowDimensions();
+
   const checkout = async () => {
     setLoading(true);
     setCart([]);
@@ -36,13 +44,12 @@ const Cart = () => {
   };
 
   if (loading) {
-    return (
-      <Loading />
-    );
+    return <Loading />;
   } else {
     return (
       <Container>
         <h1 style={{ margin: "32px 0 36px" }}>Carrinho</h1>
+        {width <= 575 ? <SearchForm /> : null}
         {cart.length === 0 ? (
           <h2 style={{ display: "flex", justifyContent: "center" }}>
             Não existem produtos
@@ -69,7 +76,10 @@ const Cart = () => {
             <Footer>
               <div>
                 <TotalPrice>
-                  {priceFormatter({ price: getCartTotal(), formatCents: false })}
+                  {priceFormatter({
+                    price: getCartTotal(),
+                    formatCents: false,
+                  })}
                 </TotalPrice>
               </div>
               <div style={{ width: "226px" }}>
@@ -81,7 +91,6 @@ const Cart = () => {
       </Container>
     );
   }
-
 };
 
 export default Cart;
