@@ -86,7 +86,7 @@ function Provider({ children }) {
   };
 
   const setCartToLocalStorage = () => {
-    if (cart.length > 0) {
+    if (cart.length >= 0) {
       localStorage.setItem("shopee-cart", JSON.stringify(cart));
     }
   };
