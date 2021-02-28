@@ -16,7 +16,7 @@ export const CardWrapper = styled.div`
       padding: 32px;
     `};
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +46,7 @@ export const ImageContainer = styled.div`
           margin-bottom: 16px;
         `}
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     margin: 0;
   }
 `;
@@ -91,7 +91,7 @@ export const Description = styled.div`
     margin-top: 8px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     align-items: center;
     p {
       margin: 16px 0;

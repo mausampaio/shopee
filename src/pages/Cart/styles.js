@@ -32,7 +32,7 @@ export const Header = styled.div`
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     display: none;
   }
 `;
@@ -47,7 +47,7 @@ export const Content = styled.div`
   background: var(--primary);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.13);
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     padding: 16px 32px;
   }
 `;
@@ -60,7 +60,7 @@ export const Footer = styled.div`
   align-items: center;
   margin: 32px 0;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     gap: 0;
     flex-direction: column;
 
@@ -90,7 +90,7 @@ export const Item = styled.div`
     flex-direction: column;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 575px) {
     padding: 32px 0;
   }
 `;
@@ -105,7 +105,7 @@ export const Controls = styled.div`
     margin-top: 10px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 655px) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -126,7 +126,7 @@ export const Property = styled.div`
     margin: 0;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 655px) {
     margin-top: 16px;
   }
 `;
