@@ -30,13 +30,17 @@ export const ProductCard = ({ productDetails = {} }) => {
 
   return (
     <CardWrapper>
-      <Link to={{ pathname: `/products/${id}`, state: productDetails }}>
+      <Link
+        to={{ pathname: `/products/${id}`, state: productDetails }}
+        onClick={() => context.setSearchValue("")}
+      >
         <ImageContainer>
           <img src={image} alt={name} />
         </ImageContainer>
       </Link>
       <TitleWithLink
         to={{ pathname: `/products/${id}`, state: productDetails }}
+        onClick={() => context.setSearchValue("")}
       >
         {truncateString(name, 40)}
       </TitleWithLink>
