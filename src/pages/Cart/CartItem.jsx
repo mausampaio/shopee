@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BuyButton from "../../components/BuyButton";
 import { PriceTag } from "../../styles/GlobalStyles";
 import { localePriceFormater } from "../../utils/localePriceFormater";
@@ -9,7 +10,11 @@ export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
 
   return (
     <Item lineBreak={lineBreak}>
-      <h2>{name}</h2>
+      <h2>
+        <Link to={`/products/${id}`} style={{ textDecoration: "none" }}>
+          {name}
+        </Link>
+      </h2>
       <Controls>
         <Property>
           <PriceTag>{localePriceFormater(price)}</PriceTag>
