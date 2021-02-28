@@ -37,6 +37,8 @@
 
 O Shopee é uma aplicação desenvolvida para a conclusão do módulo de 'front-end' do curso DEVinHouse. Tal projeto analoga com um 'site' de compras, sendo, portanto, uma aplicação de grande verossimilhança. Foi utilizado, em seu desenvolvimento, a biblioteca 'React', 'React Router DOM' e 'Styled Components' (as quais possuem ampla utilização) e a linguagem de programação 'JavaScript'.
 
+URL de acesso: <a href="https://shopee-rangers.netlify.app/">https://shopee-rangers.netlify.app</a>
+
 <br/>
 
 ## :computer: Web
