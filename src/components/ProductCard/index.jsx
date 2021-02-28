@@ -40,7 +40,7 @@ export const ProductCard = ({ productDetails = {} }) => {
       >
         {truncateString(name, 40)}
       </TitleWithLink>
-      <PriceTag>{priceFormatter(price)}</PriceTag>
+      <PriceTag>{priceFormatter({ price: price, formatCents: true })}</PriceTag>
       <Installments>{`ou 10x de ${localePriceFormater(
         price / 10
       )}`}</Installments>
@@ -75,7 +75,9 @@ export const ProductCardDetails = ({ product }) => {
       <Description>
         <p>{description}</p>
         <div style={{ width: "100%" }}>
-          <PriceTag>{priceFormatter(price)}</PriceTag>
+          <PriceTag>
+            {priceFormatter({ price: price, formatCents: true })}
+          </PriceTag>
           <Installments>{`ou 10x de ${localePriceFormater(
             price / 10
           )}`}</Installments>

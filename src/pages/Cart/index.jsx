@@ -1,37 +1,9 @@
 import React from "react";
 import { Store } from "../../context";
 import { Button, Container } from "../../styles/GlobalStyles";
-import { localePriceFormater } from "../../utils/localePriceFormater";
+import { priceFormatter } from "../../utils/priceFormatter";
 import { CartItem } from "./CartItem";
 import { Content, Header, Footer, TotalPrice } from "./styles";
-
-const formatter = (price) => {
-  const formatPrice = localePriceFormater(price);
-  let splitedPrice = formatPrice.split("");
-  console.log(splitedPrice);
-  const reais = splitedPrice[0] + splitedPrice[1];
-  let value = "";
-  for (let i = 2; i < splitedPrice.length; i++) {
-    value += splitedPrice[i];
-  }
-  return (
-    <>
-      <span
-        style={{
-          fontSize: "24px",
-          lineHeight: "24px",
-          fontWeight: "500",
-          paddingTop: "10%",
-        }}
-      >
-        {reais}
-      </span>
-      <span style={{ fontSize: "48px", lineHeight: "24px", fontWeight: "500" }}>
-        {value}
-      </span>
-    </>
-  );
-};
 
 const Cart = () => {
   const context = React.useContext(Store);
@@ -78,7 +50,9 @@ const Cart = () => {
           </Content>
           <Footer>
             <div>
-              <TotalPrice>{formatter(getCartTotal())}</TotalPrice>
+              <TotalPrice>
+                {priceFormatter({ price: getCartTotal(), formatCents: false })}
+              </TotalPrice>
             </div>
             <div style={{ width: "226px" }}>
               <Button onClick={checkout}>Finalizar Compra</Button>
