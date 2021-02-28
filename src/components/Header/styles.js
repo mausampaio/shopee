@@ -11,11 +11,8 @@ export const Container = styled.div`
   height: 70px;
   width: 100%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14);
-
-  @media screen and (max-width: 375px) {
-    position: sticky;
-    top: 0;
-  }
+  position: sticky;
+  top: 0;
 `;
 
 export const ShopeeLink = styled(Link)`
