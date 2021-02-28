@@ -71,6 +71,8 @@ export const Footer = styled.div`
 `;
 
 export const TotalPrice = styled(PriceTag)`
+  display: flex;
+  align-items: center;
   font-size: 48px;
 `;
 
