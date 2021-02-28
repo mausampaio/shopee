@@ -17,7 +17,9 @@ export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
       </h2>
       <Controls>
         <Property>
-          <PriceTag>{priceFormatter(price)}</PriceTag>
+          <PriceTag>
+            {priceFormatter({ price: price, formatCents: true })}
+          </PriceTag>
         </Property>
         <Property>
           <BuyButton
@@ -27,7 +29,9 @@ export function CartItem({ product, lineBreak, onIncrement, onDecrement }) {
           />
         </Property>
         <Property>
-          <PriceTag>{priceFormatter(quantity * price)}</PriceTag>
+          <PriceTag>
+            {priceFormatter({ price: quantity * price, formatCents: true })}
+          </PriceTag>
         </Property>
       </Controls>
     </Item>
