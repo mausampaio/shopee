@@ -52,18 +52,6 @@ export default createGlobalStyle`
   }
 `;
 
-export const Button = styled.button`
-  width: 100%;
-  min-width: 44px;
-  height: 44px;
-  background-color: var(--secondary);
-  border-radius: 4px;
-  color: var(--primary);
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-`;
-
 export const Container = styled.div`
   width: 80%;
   max-width: 1280px;
