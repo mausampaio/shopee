@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should matcht snapshot 1`] = `
+<DocumentFragment>
+  .c6 {
+  width: 100%;
+  min-width: 44px;
+  height: 44px;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.c5 {
+  width: 226px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  background-color: var(--primary);
+  width: 258px;
+  padding: 16px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.c1 {
+  width: 226px;
+  height: 226px;
+  overflow: hidden;
+  background-color: var(--primary);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.c1 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.c2 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 32px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.c3 span {
+  font-size: 14px;
+}
+
+.c4 {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  display: block;
+}
+
+@media screen and (max-width:575px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .c1 {
+    margin: 0;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <a
+      href="/products/999999"
+    >
+      <div
+        class="c1"
+      >
+        <img
+          alt="Nome do produto padrão"
+          src="https://via.placeholder.com/500"
+        />
+      </div>
+    </a>
+    <a
+      class="c2"
+      href="/products/999999"
+    >
+      Nome do produto padrão
+    </a>
+    <div
+      class="c3"
+    >
+      <span
+        style="font-size: 20px; line-height: 24px; font-weight: 500; padding-top: 0px;"
+      >
+        R$
+      </span>
+      <span
+        style="font-size: 32px; line-height: 24px; font-weight: 500;"
+      >
+         1
+      </span>
+      <span
+        style="font-size: 16px; line-height: 24px; font-weight: 500;"
+      >
+        ,00
+      </span>
+    </div>
+    <span
+      class="c4"
+    >
+      ou 10x de R$ 0,10
+    </span>
+    <div
+      class="c5"
+    >
+      <button
+        class="c6"
+      >
+        Comprar
+      </button>
+    </div>
+  </div>
+  ;
+</DocumentFragment>
+`;
