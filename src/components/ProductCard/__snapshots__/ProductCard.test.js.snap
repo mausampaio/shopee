@@ -127,22 +127,22 @@ exports[`should matcht snapshot 1`] = `
     class="c0"
   >
     <a
-      href="/products/999999"
+      href="/products/9999"
     >
       <div
         class="c1"
       >
         <img
-          alt="Nome do produto padrão"
+          alt="Produto padrão"
           src="https://via.placeholder.com/500"
         />
       </div>
     </a>
     <a
       class="c2"
-      href="/products/999999"
+      href="/products/9999"
     >
-      Nome do produto padrão
+      Produto padrão
     </a>
     <div
       class="c3"
@@ -178,6 +178,5 @@ exports[`should matcht snapshot 1`] = `
       </button>
     </div>
   </div>
-  ;
 </DocumentFragment>
 `;

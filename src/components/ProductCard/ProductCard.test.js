@@ -1,25 +1,28 @@
-import { generateString, render } from "../../test-utils";
+import { Store } from "../../context";
+import { mockContext, mockProduct, render } from "../../test-utils";
 import { ProductCard } from "./index";
 
-const mockedProduct = {
-  id: 1,
-  image: generateString(),
-  name: generateString(),
-  price: 1.0,
-};
+const ContextProvider = ({ children }) => (
+  <Store.Provider value={mockContext}>{children}</Store.Provider>
+);
 
 test("should render with props", () => {
-  const { getByText } = render(<ProductCard productDetails={mockedProduct} />);
-  expect(getByText(mockedProduct.name)).toBeInTheDocument();
+  const { getByText } = render(<ProductCard productDetails={mockProduct} />, {
+    wrapper: ContextProvider,
+  });
+  expect(getByText(mockProduct.name)).toBeInTheDocument();
 });
 
 test("should render without props", () => {
-  const { getByText } = render(<ProductCard productDetails={undefined} />);
-
-  expect(getByText("Nome do produto padrão")).toBeInTheDocument();
+  const { getByText } = render(<ProductCard productDetails={undefined} />, {
+    wrapper: ContextProvider,
+  });
+  expect(getByText(/produto padr/i)).toBeInTheDocument();
 });
 
 test("should matcht snapshot", () => {
-  const { asFragment } = render(<ProductCard productDetails={undefined} />);
+  const { asFragment } = render(<ProductCard productDetails={undefined} />, {
+    wrapper: ContextProvider,
+  });
   expect(asFragment()).toMatchSnapshot();
 });

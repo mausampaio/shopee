@@ -111,9 +111,9 @@ ProductCard.propTypes = {
 
 ProductCard.defaultProps = {
   productDetails: {
-    id: 999999,
+    id: 9999,
     image: "https://via.placeholder.com/500",
-    name: "Nome do produto padrão",
+    name: "Produto padrão",
     price: 1,
   },
 };
