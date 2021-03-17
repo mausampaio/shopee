@@ -16,6 +16,5 @@ exports[`should match snapshot 1`] = `
 <div
     class="c0"
   />
-  ;
 </DocumentFragment>
 `;
