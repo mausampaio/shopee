@@ -20,3 +20,10 @@ test("should render a product detail using id=1 on params", () => {
   });
   expect(getByText(mockProduct.name)).toBeInTheDocument();
 });
+
+test("should match snapshot", () => {
+  const { asFragment } = render(<Details />, {
+    wrapper: ContextProvider,
+  });
+  expect(asFragment()).toMatchSnapshot();
+});
