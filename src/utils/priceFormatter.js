@@ -1,6 +1,7 @@
 import { localePriceFormater } from "./localePriceFormater";
 
 export const priceFormatter = ({ price, formatCents }) => {
+  if (!price || !formatCents) return;
   const formatPrice = localePriceFormater(price);
   let splitedPrice = formatPrice.split("");
   const reais = splitedPrice[0] + splitedPrice[1];
