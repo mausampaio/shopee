@@ -32,11 +32,11 @@ function Header() {
         <img src={Shopee} alt={"Shoppe"} />
       </ShopeeLink>
       {width > 575 && <SearchForm />}
-      <CartButton onClick={handleGoToCart}>
+      <CartButton onClick={handleGoToCart} data-testid="cart-btn">
         <ShoppingCart />
         {itemsInCart >= 1 && (
           <ItemsNumber>
-            <span>{itemsInCart}</span>
+            <span data-testid="qty-badge">{itemsInCart}</span>
           </ItemsNumber>
         )}
       </CartButton>
