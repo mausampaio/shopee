@@ -1,10 +1,5 @@
-import crypto from "crypto";
 import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-
-export const generateString = () => {
-  return crypto.randomBytes(4).toString("hex");
-};
 
 export const mockProduct = {
   id: 1,
