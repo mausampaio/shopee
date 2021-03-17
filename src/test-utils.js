@@ -1,5 +1,4 @@
 import crypto from "crypto";
-import { createContext } from "react";
 import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
@@ -7,41 +6,37 @@ export const generateString = () => {
   return crypto.randomBytes(4).toString("hex");
 };
 
-const Store = createContext();
-
-const mockProduct = {
+export const mockProduct = {
   id: 1,
-  name: generateString(),
+  name: "Produto de teste",
   price: 1.0,
-  description: generateString(),
-  url: generateString(),
-  image: generateString(),
+  description: "Produto gerado para testes",
+  url: "produto-de-teste",
+  image: "./produto-teste.jpg",
 };
 
-const mockContext = {
-  cart: [
-    {
-      id: mockProduct.id,
-      name: mockProduct.name,
-      price: mockProduct.price,
-      quantity: 10,
-    },
-  ],
-  products: [mockProduct],
-  product: mockProduct,
+export const mockCart = {
+  id: mockProduct.id,
+  name: mockProduct.name,
+  price: mockProduct.price,
+  quantity: 10,
+};
+
+export const mockContext = {
+  cart: [],
+  products: [],
+  product: {},
   loading: false,
+  getCartTotal: () => 0,
 };
 
-const AllTheProviders = ({ children }) => {
-  return (
-    <Store.Provider value={mockContext}>
-      <BrowserRouter>{children}</BrowserRouter>;
-    </Store.Provider>
-  );
+const RouterProvider = ({ children }) => {
+  return <BrowserRouter>{children}</BrowserRouter>;
 };
 
-const customRender = (ui, options) =>
-  render(<AllTheProviders>{ui}</AllTheProviders>, { ...options });
+const customRender = (ui, options) => {
+  return render(<RouterProvider>{ui}</RouterProvider>, { ...options });
+};
 
 export * from "@testing-library/react";
 
