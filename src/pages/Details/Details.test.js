@@ -1,14 +1,22 @@
 import Details from ".";
 import { Store } from "../../context";
-import { mockContext, render } from "../../test-utils";
+import { mockContext, mockProduct, render } from "../../test-utils";
+
+// mock a param with value 'id = 1'
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useParams: () => ({ id: 1 }),
+}));
 
 const ContextProvider = ({ children }) => (
-  <Store.Provider value={mockContext}>{children}</Store.Provider>
+  <Store.Provider value={{ ...mockContext, products: [mockProduct] }}>
+    {children}
+  </Store.Provider>
 );
 
-test("should render 'Produto não encontrado!' if no product is on cart", () => {
+test("should render a product detail using id=1 on params", () => {
   const { getByText } = render(<Details />, {
     wrapper: ContextProvider,
   });
-  expect(getByText("Produto não encontrado!")).toBeInTheDocument();
+  expect(getByText(mockProduct.name)).toBeInTheDocument();
 });
