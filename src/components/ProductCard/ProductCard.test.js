@@ -20,7 +20,7 @@ test("should render without props", () => {
   expect(getByText(/produto padr/i)).toBeInTheDocument();
 });
 
-test("should matcht snapshot", () => {
+test("should match snapshot", () => {
   const { asFragment } = render(<ProductCard productDetails={undefined} />, {
     wrapper: ContextProvider,
   });

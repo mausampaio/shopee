@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should matcht snapshot 1`] = `
+exports[`should match snapshot 1`] = `
 <DocumentFragment>
   .c6 {
   width: 100%;
