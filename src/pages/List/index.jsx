@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { ProductCard } from "../../components/ProductCard";
 import { ListContent } from "./styles";
-import { Container } from "../../styles/GlobalStyles";
+import { Container } from "../../components/Container";
 import { Store } from "../../context";
 import { useQuery } from "../../hooks/useQuery";
 import useWindowDimensions from "../../hooks/useWindowDimensions";

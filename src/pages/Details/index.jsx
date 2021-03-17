@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { ButtonWrapper, ButtonContainer } from "./styles";
-import { Container } from "../../styles/GlobalStyles";
+import { Container } from "../../components/Container";
 import { ProductCardDetails } from "../../components/ProductCard";
 import { Store } from "../../context";
 import { Loading } from "../../components/Loading";
