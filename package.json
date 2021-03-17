@@ -30,6 +30,8 @@
       "src/**/*.js",
       "!src/services/api.js",
       "!src/context.js",
+      "!src/utils/*.js",
+      "!src/hooks/*.js",
       "!src/routes.js",
       "!src/index.js",
       "!src/App.js"
