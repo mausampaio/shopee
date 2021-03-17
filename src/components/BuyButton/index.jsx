@@ -1,8 +1,12 @@
-import { Button } from "../../styles/GlobalStyles";
-import { BuyButtonContainer, ProductDelete, ProductSpan, ProductUnitButtonContainer } from "./styles";
+import { Button } from "../Button";
+import {
+  BuyButtonContainer,
+  ProductDelete,
+  ProductSpan,
+  ProductUnitButtonContainer,
+} from "./styles";
 
-
-const BuyButton = props => {
+const BuyButton = (props) => {
   let { productCartNumber = 0, onIncrement, onDecrement } = props;
 
   return (
@@ -14,7 +18,9 @@ const BuyButton = props => {
       ) : (
         <BuyButtonContainer>
           <ProductUnitButtonContainer>
-            <Button onClick={onDecrement}>{productCartNumber === 1 ? (<ProductDelete />) : "-"}</Button>
+            <Button onClick={onDecrement}>
+              {productCartNumber === 1 ? <ProductDelete /> : "-"}
+            </Button>
           </ProductUnitButtonContainer>
           <ProductSpan>{productCartNumber}</ProductSpan>
           <ProductUnitButtonContainer>

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<DocumentFragment>
+  .c0 {
+  border: 8px solid #e7e7e7;
+  border-radius: 50%;
+  border-top: 8px solid var(--secondary);
+  width: 80px;
+  height: 80px;
+  margin: 64px auto;
+  -webkit-animation: dHAcpB 2s linear infinite;
+  animation: dHAcpB 2s linear infinite;
+}
+
+<div
+    class="c0"
+  />
+</DocumentFragment>
+`;

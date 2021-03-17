@@ -1,4 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 import { truncateString } from "../../utils/truncateString";
 import { localePriceFormater } from "../../utils/localePriceFormater";
@@ -20,7 +22,7 @@ export const ProductCard = ({ productDetails = {} }) => {
   const context = useContext(Store);
 
   useEffect(() => {
-    const foundItem = context.cart.find((product) => product.id === id);
+    const foundItem = context?.cart.find((product) => product.id === id);
     if (foundItem) {
       setQuantity(foundItem.quantity);
     } else {
@@ -94,4 +96,24 @@ export const ProductCardDetails = ({ product }) => {
       </Description>
     </CardWrapper>
   );
+};
+
+const productDetailsShape = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
+};
+
+ProductCard.propTypes = {
+  productDetails: PropTypes.shape(productDetailsShape),
+};
+
+ProductCard.defaultProps = {
+  productDetails: {
+    id: 9999,
+    image: "https://via.placeholder.com/500",
+    name: "Produto padrão",
+    price: 1,
+  },
 };
