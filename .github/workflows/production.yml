@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 14.x
       # Run yarn install and build on our code
-      - run: npm ci
+      - run: npm install
       - run: npm run build --if-present
       - run: npm test
       # Deploy to Netlify using our production secrets
