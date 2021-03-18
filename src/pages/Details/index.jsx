@@ -9,7 +9,7 @@ import SearchForm from "../../components/SearchForm";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { Button } from "../../components/Button";
 
-function Details(props) {
+function Details() {
   const context = useContext(Store);
   const { id } = useParams();
   const { width } = useWindowDimensions();
