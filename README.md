@@ -22,7 +22,17 @@
   
   <a href="https://github.com/mausampaio/shopee/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mausampaio/shopee?style=flat-square">
-  </a>  
+  </a>
+</p>
+
+<p align="center"> 
+  <img alt="Integration test status" src="https://github.com/mausampaio/shopee/actions/workflows/test.yml/badge.svg">
+  
+  <img alt="Integration test status" src="https://github.com/mausampaio/shopee/actions/workflows/production.yml/badge.svg">
+  
+  <a href="https://app.netlify.com/sites/shopee-rangers/deploys">
+    <img alt="GitHub last commit" src="https://api.netlify.com/api/v1/badges/cd6dfac8-15fd-45b2-91ba-d7f7544afbac/deploy-status">
+  </a>
 </p>
 
 <br/>
