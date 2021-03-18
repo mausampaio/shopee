@@ -1,0 +1,32 @@
+#  Name of workflow
+name: Integration test
+
+# Trigger workflow on all pull requests
+on:
+  pull_request:
+    branches:
+      - main
+
+# Jobs to carry out
+jobs:
+  test:
+    # Operating system to run job on
+    runs-on: ubuntu-latest
+    # Steps in job
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # Install NodeJS
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      # Build the app using cypress
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
+          wait-on: http://localhost:3000
+          browser: chrome
